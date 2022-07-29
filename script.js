@@ -12,46 +12,48 @@ let userChoice;
 let roboChoice;
 
 const gameLogic = () => {
+    if(userscore == 10){
+        alert(`Congratulations you won this game.`);
+        reset();
+    } else if (roboscore == 10){
+        alert(`Hmm... You lost, try again.`);
+        reset();
+    } else {
     if(userChoice == roboChoice){
-        result.innerText = 'its a drwa lets try again';
+        result.innerText = 'Its a tie!';
     } else if (userChoice == 0 && roboChoice == 1){
         result.innerText = 'Robo won!';
         roboscore += 1; 
-        // userscore -= 1;
-        robosc.innerText = roboscore;
-        usrsc.innerText = userscore;
+        setScore();
     } else if(userChoice == 0 && roboChoice == 2) {
         result.innerText = 'You won!';
         userscore += 1; 
-        // roboscore -= 1;
-        robosc.innerText = roboscore;
-        usrsc.innerText = userscore;
+        setScore();
     } else if(userChoice == 1 && roboChoice == 0) {
         result.innerText = 'You won!';
         userscore += 1; 
-        // roboscore -= 1;
-        robosc.innerText = roboscore;
-        usrsc.innerText = userscore;
+        setScore();
     } else if(userChoice == 1 && roboChoice == 2) {
         result.innerText = 'Robo won!';
         roboscore += 1; 
-        // userscore -= 1;
-        robosc.innerText = roboscore;
-        usrsc.innerText = userscore;
+        setScore();
     } else if(userChoice == 2 && roboChoice == 0) {
         result.innerText = 'Robo won!';
         roboscore += 1; 
-        // userscore -= 1;
-        robosc.innerText = roboscore;
-        usrsc.innerText = userscore;
-    } else if(userChoice == 2 && roboChoice == 1) {
+        setScore();
+    } else{
         result.innerText = 'You won!';
         userscore += 1; 
-        // roboscore -= 1;
-        robosc.innerText = roboscore;
-        usrsc.innerText = userscore;
+        setScore();
     }
 }
+}
+
+const setScore = () => {
+    robosc.innerText = roboscore;
+    usrsc.innerText = userscore;
+}
+
 const reset = () => {
     userscore = 0; roboscore=0;
     robosc.innerText = roboscore;
@@ -73,3 +75,7 @@ const scissorVal = () => {
     roboChoice = Math.floor(Math.random()*3);
     gameLogic();
 }
+
+const rspValues = document.querySelectorAll('button');
+
+console.log(rspValues);
