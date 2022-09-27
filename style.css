@@ -6,6 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(169, 169, 249);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
@@ -115,4 +116,94 @@ button:hover {
     border: 2px solid black;
     background-color: rgb(107, 183, 183);
     color: darkred;
+}
+
+.youWon{
+    display: none;
+    height: auto;
+    width: auto;
+    background-color: rgb(81, 213, 247);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: inset -8px 0px 8px rgb(0, 0, 0, 0.15),
+    inset -8px 0px 8px rgb(0, 0, 0, 0.25),
+    0 0 0 0 rgb(0, 0, 0, 0.75),
+    5px 10px 20px rgb(0, 0, 0, 0.4);
+    text-align: center;
+    text-shadow: 0px 2px 15px darkcyan ;
+    font-size: 1.5rem;
+    margin: 15px;
+}
+
+#playAgain{
+    height: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: none;
+}
+
+.youLost{
+    display: none;
+    height: auto;
+    width: auto;
+    background-color: rgb(81, 213, 247);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: inset -8px 0px 8px rgb(0, 0, 0, 0.15),
+    inset -8px 0px 8px rgb(0, 0, 0, 0.25),
+    0 0 0 0 rgb(0, 0, 0, 0.75),
+    5px 10px 20px rgb(0, 0, 0, 0.4);
+    text-align: center;
+    text-shadow: 0px 2px 15px darkcyan ;
+    font-size: 1.5rem;
+    margin: 15px;
+}
+
+#oneMoreTry{
+    height: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: none;
+}
+
+.displayNone{
+    display: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+@media (max-width:680px){
+    .container{
+        width: 85vw;
+        height: 350px;
+    }
+    .options button{
+        border-radius: 20px;
+        width: 18vw;
+        height: 15vw;
+        margin: 4px;
+    }
+
+    #result{
+        width: 70%;
+    }
+
+    .scoreboard{
+        height: auto;
+    }
+
+    .scoreboard p{
+        font-size: .8rem;
+    }
+
+    .options button img{
+        width: 9vw;
+        height: 9vw;
+    }
+
+    #clear{
+        width: 70%;
+    }
 }

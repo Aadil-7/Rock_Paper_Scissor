@@ -24,6 +24,15 @@
         </div>
         <button id="clear" onclick="reset()">clear game</button>
     </div>
+    <div class="youWon" id="won">
+        <p>Congratulations! You Won.<br><span id="wonMess"></span></p>
+        <button id="playAgain" onclick="playAgain()">Play Again</button>
+    </div>
+    <div class="youLost" id="lost">
+        <p>Hmm... You Lost Try Again Next Time.<br><span id="lostMess"></span></p>
+        <button id="oneMoreTry" onclick="playAgain()">Play Again</button>
+    </div>
+    <script src="./confetti.js"></script>
     <script src="./script.js"></script>
 </body>
 
